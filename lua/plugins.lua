@@ -35,9 +35,9 @@ packer.startup({
   function(use)
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
-    -- nvim-tree
+    -- nerdtree
     use({
-      "kyazdani42/nvim-tree.lua",
+      "scrooloose/nerdtree",
 
       requires = "kyazdani42/nvim-web-devicons",
     })
@@ -81,25 +81,25 @@ packer.startup({
     use({ "williamboman/nvim-lsp-installer" })
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
-    -- 补全引擎
+    -- complete engine
     use("hrsh7th/nvim-cmp")
-    -- Snippet 引擎
+    -- Snippet
     use("hrsh7th/vim-vsnip")
-    -- 补全源
+    -- complete source
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
     use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
-    -- 常见编程语言代码段
+    -- common language code
     use("rafamadriz/friendly-snippets")
     -- UI 增强
     use("onsails/lspkind-nvim")
     use("tami5/lspsaga.nvim")
     -- 代码格式化
     use("mhartington/formatter.nvim")
-    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     -- TypeScript 增强
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     -- Lua 增强
@@ -151,7 +151,6 @@ packer.startup({
       packer.sync()
     end
   end,
- 
 })
 
 -- 每次保存 plugins.lua 自动安装插件

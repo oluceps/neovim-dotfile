@@ -122,8 +122,8 @@ map("n", "zz", ":foldclose<CR>", opt)
 map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
-map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+-- map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>m", ":NERDTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = { "o", "<2-LeftMouse>" }, action = "edit" },
@@ -156,8 +156,8 @@ pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 }
 -- bufferline
 -- 左右Tab切换
-map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<S-j>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<S-k>", ":BufferLineCycleNext<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
 map("n", "<leader>bc", ":Bdelete!<CR>", opt)
 map("n", "<C-w>", ":Bdelete!<CR>", opt)

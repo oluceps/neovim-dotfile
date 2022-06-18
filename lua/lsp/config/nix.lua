@@ -1,1 +1,5 @@
-require 'lspconfig'.rnix.setup{}
+return {
+  on_setup = function (server)
+    server.setup({})
+  end
+}

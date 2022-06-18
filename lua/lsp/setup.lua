@@ -24,7 +24,7 @@ local servers = {
   taplo = require("lsp.config.toml"),
   clangd = require("lsp.config.c"),
 
-  -- remark_ls = require("lsp.config.markdown"),
+  remark_ls = require("lsp.config.markdown"),
 }
 
 for name, config in pairs(servers) do

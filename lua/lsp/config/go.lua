@@ -1,1 +1,6 @@
-require'lspconfig'.gopls.setup{}
+-- require'lspconfig'.gopls.setup{}
+return {
+  on_setup = function (server)
+    server.setup({})
+  end
+}
