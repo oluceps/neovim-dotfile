@@ -5,6 +5,8 @@ require("keybindings")
 -- Packer插件管理
 require("plugins")
 -- 主题设置
+
+require("plugin-config.catppuccin")
 require("colorscheme")
 -- 自动命令
 require("autocmds")

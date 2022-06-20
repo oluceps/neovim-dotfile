@@ -1,9 +1,10 @@
 vim.o.background = "dark"
 vim.g.tokyonight_style = "storm" -- day / night
+vim.g.catppuccin_flavour = "macchiato"
 -- 半透明
-vim.g.nightfox_transparent = true
-vim.g.nightfox_transparent_sidebar = true
-local colorscheme = "nightfox"
+-- vim.g.catppuccin_transparent = true
+-- vim.g.catppuccin_ransparent_sidebar = true
+local colorscheme = "catppuccin"
 -- tokyonight
 -- OceanicNext
 -- gruvbox

@@ -35,6 +35,11 @@ packer.startup({
   function(use)
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    -- catppuccin
+    use({
+      "catppuccin/nvim",
+      as = "catppuccin"
+    })
     -- nerdtree
     use({
       "scrooloose/nerdtree",
@@ -48,6 +53,10 @@ packer.startup({
       "akinsho/bufferline.nvim",
       requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
     })
+
+    -- onenord
+    use 'rmehri01/onenord.nvim'
+
     -- lualine
     use({
       "nvim-lualine/lualine.nvim",
