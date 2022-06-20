@@ -65,7 +65,7 @@ packer.startup({
     -- dashboard-nvim
     use("glepnir/dashboard-nvim")
     -- nix support
-    use 'LnL7/vim-nix' 
+    use 'LnL7/vim-nix'
     -- project
     use("ahmedkhalf/project.nvim")
     -- treesitter
@@ -98,8 +98,8 @@ packer.startup({
     use("onsails/lspkind-nvim")
     use("tami5/lspsaga.nvim")
     -- 代码格式化
-    use("mhartington/formatter.nvim")
-    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- use("mhartington/formatter.nvim")
+    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
     -- TypeScript 增强
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     -- Lua 增强

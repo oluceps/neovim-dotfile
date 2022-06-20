@@ -125,35 +125,35 @@ map("n", "Z", ":foldopen<CR>", opt)
 -- map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>m", ":NERDTreeToggle<CR>", opt)
 -- 列表快捷键
-pluginKeys.nvimTreeList = { -- 打开文件或文件夹
-  { key = { "o", "<2-LeftMouse>" }, action = "edit" },
-  { key = "<CR>", action = "system_open" },
-  -- v分屏打开文件
-  { key = "v", action = "vsplit" },
-  -- h分屏打开文件
-  { key = "h", action = "split" },
-  -- Ignore (node_modules)
-  { key = "i", action = "toggle_ignored" },
-  -- Hide (dotfiles)
-  { key = ".", action = "toggle_dotfiles" },
-  { key = "R", action = "refresh" },
-  -- 文件操作
-  { key = "a", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "x", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-  { key = "y", action = "copy_name" },
-  { key = "Y", action = "copy_path" },
-  { key = "gy", action = "copy_absolute_path" },
-  { key = "I", action = "toggle_file_info" },
-  { key = "n", action = "tabnew" },
-  -- 进入下一级
-  { key = { "]" }, action = "cd" },
-  -- 进入上一级
-  { key = { "[" }, action = "dir_up" },
-}
+--pluginKeys.nvimTreeList = { -- 打开文件或文件夹
+--  { key = { "o", "<2-LeftMouse>" }, action = "edit" },
+--  { key = "<CR>", action = "system_open" },
+--  -- v分屏打开文件
+--  { key = "v", action = "vsplit" },
+--  -- h分屏打开文件
+--  { key = "h", action = "split" },
+--  -- Ignore (node_modules)
+--  { key = "i", action = "toggle_ignored" },
+--  -- Hide (dotfiles)
+--  { key = ".", action = "toggle_dotfiles" },
+--  { key = "R", action = "refresh" },
+--  -- 文件操作
+--  { key = "a", action = "create" },
+--  { key = "d", action = "remove" },
+--  { key = "r", action = "rename" },
+--  { key = "x", action = "cut" },
+--  { key = "c", action = "copy" },
+--  { key = "p", action = "paste" },
+--  { key = "y", action = "copy_name" },
+--  { key = "Y", action = "copy_path" },
+--  { key = "gy", action = "copy_absolute_path" },
+--  { key = "I", action = "toggle_file_info" },
+--  { key = "n", action = "tabnew" },
+--  -- 进入下一级
+--  { key = { "]" }, action = "cd" },
+--  -- 进入上一级
+--  { key = { "[" }, action = "dir_up" },
+--}
 -- bufferline
 -- 左右Tab切换
 map("n", "<S-j>", ":BufferLineCyclePrev<CR>", opt)
@@ -213,39 +213,31 @@ map("v", "<C-_>", "gcc", { noremap = false })
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
   -- rename
-  --[[
-  Lspsaga 替换 rn
+-- Lspsaga 替换 rn
   mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
-  --]]
-  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+--  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
   -- code action
-  --[[
-  Lspsaga 替换 ca
+--  Lspsaga 替换 ca
   mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
-  --]]
-  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+--  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
   -- go xx
-  --[[
-    mapbuf('n', 'gd', '<cmd>Lspsaga preview_definition<CR>', opt)
-  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+  mapbuf('n', 'gd', '<cmd>Lspsaga preview_definition<CR>', opt)
+--  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
   --]]
   mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
-  --[[
   mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
-  Lspsaga 替换 gh
+-- Lspsaga 替换 gh
   --]]
-  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+--  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
   --[[
   Lspsaga 替换 gr
   mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
   --]]
   mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
-  --[[
-  Lspsaga 替换 gp, gj, gk
+--  Lspsaga 替换 gp, gj, gk
   mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
   mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
   mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
-  --]]
   -- diagnostic
   mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)

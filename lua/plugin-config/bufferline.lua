@@ -1,6 +1,6 @@
 local status, bufferline = pcall(require, "bufferline")
 if not status then
-  vim.notify("没有找到 bufferline")
+  vim.notify("bufferline not found")
   return
 end
 -- bfferline 配置
