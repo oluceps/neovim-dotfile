@@ -25,6 +25,8 @@ map("n", "$", "g_", opt)
 map("n", "g_", "$", opt)
 map("v", "x", "\"_x", opt)
 map("n", "x", "\"_x", opt)
+map("n", "X", "\"_xi", opt)
+map("v", "X", "\"_xi", opt)
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", { noremap = false })
 map("c", "<C-k>", "<C-p>", { noremap = false })

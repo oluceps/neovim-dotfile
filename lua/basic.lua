@@ -1,6 +1,10 @@
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
+vim.g.neovide_transparency=0.5
+vim.g.neovide_no_idle = true
+vim.g.neovide_refresh_rate = 140
+
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
