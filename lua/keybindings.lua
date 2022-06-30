@@ -23,7 +23,8 @@ map("v", "$", "g_", opt)
 map("v", "g_", "$", opt)
 map("n", "$", "g_", opt)
 map("n", "g_", "$", opt)
-
+map("v", "x", "\"_x", opt)
+map("n", "x", "\"_x", opt)
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", { noremap = false })
 map("c", "<C-k>", "<C-p>", { noremap = false })
@@ -57,6 +58,7 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 -- 在visual mode 里粘贴不要复制
 map("v", "p", '"_dP', opt)
+
 
 -- 退出
 map("n", "qq", ":q!<CR>", opt)
@@ -437,7 +439,7 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   map("n", "<leader>gtd", gs.toggle_deleted)
   map("n", "<leader>gtb", gs.toggle_current_line_blame)
   -- Text object
-  map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
+  -- map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
 return pluginKeys
