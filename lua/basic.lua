@@ -1,7 +1,7 @@
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
-vim.g.neovide_transparency=0.5
+vim.g.neovide_transparency = 0.5
 vim.g.neovide_no_idle = true
 vim.g.neovide_refresh_rate = 140
 
@@ -71,6 +71,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 是否显示不可见字符
 vim.o.list = false
+vim.o.updatetime = 5000
 -- 不可见字符的显示，这里只把空格显示为一个点
 vim.o.listchars = "space:·,tab:··"
 -- 补全增强

@@ -5,6 +5,7 @@ vim.g.catppuccin_flavour = "macchiato"
 -- vim.g.catppuccin_transparent = true
 -- vim.g.catppuccin_ransparent_sidebar = true
 local colorscheme = "catppuccin"
+
 -- tokyonight
 -- OceanicNext
 -- gruvbox
@@ -14,6 +15,6 @@ local colorscheme = "catppuccin"
 -- nightfox
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-  vim.notify("colorscheme: " .. colorscheme .. " not found!")
-  return
+	vim.notify("colorscheme: " .. colorscheme .. " not found!")
+	return
 end
