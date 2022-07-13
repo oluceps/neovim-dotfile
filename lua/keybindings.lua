@@ -28,6 +28,8 @@ map("v", "x", '"_x', opt)
 map("n", "x", '"_x', opt)
 map("n", "X", '"_xi', opt)
 map("v", "X", '"_xi', opt)
+map("v", "<C-c>", '"+y', opt)
+map("v", "<C-v>", '"+p', opt)
 map_vim("i", "<C-o>", "<Right>")
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", { noremap = false })
